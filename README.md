@@ -165,7 +165,7 @@ POST /api/urls/create
 
 ```json
 {
-  "originalUrl": "https://www.google.com"
+  "originalUrl": "https://chatgpt.com/"
 }
 ```
 
@@ -173,11 +173,13 @@ POST /api/urls/create
 
 ```json
 {
-  "success": true,
-  "message": "Short URL created successfully",
-  "data": {
-    "shortCode": "abc123"
-  }
+    "success": true,
+    "message": "Short Url created Successfully",
+    "data": {
+        "id": "6a2fc75ecab81a4a1453c280",
+        "originalUrl": "https://chatgpt.com/",
+        "shortCode": "l8rwXUu"
+    }
 }
 ```
 
@@ -194,7 +196,7 @@ GET /api/urls/:shortCode
 ### Example
 
 ```http
-GET /api/urls/abc123
+GET /api/urls/l8rwXUu
 ```
 
 Redirects user to original URL.
@@ -213,14 +215,14 @@ GET /api/analytics/:shortCode
 
 ```json
 {
-  "success": true,
-  "message": "Analytics fetched successfully",
-  "data": {
-    "shortCode": "abc123",
-    "totalClicks": 10,
-    "uniqueVisitors": 2,
-    "lastClickedAt": "2026-06-15T12:00:00.000Z"
-  }
+    "success": true,
+    "message": "Analytics fetched successfully",
+    "data": {
+        "shortCode": "l8rwXUu",
+        "totalClicks": 1,
+        "uniqueVisitors": 1,
+        "lastClickedAt": "2026-06-15T09:36:02.013Z"
+    }
 }
 ```
 
